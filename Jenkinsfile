@@ -3,13 +3,13 @@ pipeline{
     stages {
        stage ('checkout'){
           steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/naren-21/multipydemo.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/test']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/naren-21/multipydemo.git']]])
                 }
         }
        stage ('programe3'){
           steps { 
-                git branch: 'main', credentialsId: 'test123', url: 'https://github.com/naren-21/multipydemo.git'
-                sh 'python3 avg.py'
+                git branch: 'test', credentialsId: 'test123', url: 'https://github.com/naren-21/multipydemo.git'
+                sh 'python3 cmp.py'
                 
                 }
             }
