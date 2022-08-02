@@ -15,7 +15,7 @@ pipeline{
             }
         stage ('email'){
             steps {
-                 mail bcc: '', body: 'descriptive pipeline program executed...', cc: 'dravi@stratapps.com,mmahesh@stratapps.com,vabhinav@stratapps.com', from: '', replyTo: '', subject: 'build success', to: 'duvvarapu.naren@gmail.com,dnkumar@stratapps.com'
+                 mail bcc: '', body: 'descriptive pipeline program executed...', cc: 'mmahesh@stratapps.com,vabhinav@stratapps.com,klakshmansai@stratapps.com', from: '', replyTo: '', subject: 'build success', to: 'duvvarapu.naren@gmail.com,dnkumar@stratapps.com'
                  }
             }
         }
